@@ -132,7 +132,7 @@ If you reference this work, please cite:
 
 Concept White Paper v3.1 (2026).
 
-DOI: https://doi.org/10.5281/zenodo.21185808
+DOI: https://doi.org/10.5281/zenodo.21194413
 
 ---
 
