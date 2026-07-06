@@ -1,48 +1,83 @@
 # 🚀 Mars Avatar Project
 
-## Control Without Presence
+### *Control Without Presence*
 
-**Concept White Paper v3.1**
+**Concept White Paper v3.2**
 
-*A conceptual architecture for telepresence and autonomous robotic avatars for Mars exploration.*
+A conceptual architecture for goal-driven telepresence and autonomous robotic avatars for future Mars exploration.
 
 ---
 
 ## Overview
 
-The **Mars Avatar Project** presents a conceptual system architecture in which human operators remain responsible for mission goals and strategic decisions, while autonomous robotic avatars perform physical operations on the surface of Mars.
+The **Mars Avatar Project (MAP)** proposes a conceptual system architecture in which human operators remain responsible for mission objectives and strategic decisions, while autonomous robotic avatars perform physical operations on Mars.
 
-Instead of direct real-time teleoperation—which is impossible because of the 4–22 minute communication delay between Earth and Mars—the system relies on local artificial intelligence capable of executing high-level objectives autonomously.
+Instead of relying on impossible real-time teleoperation across interplanetary distances, the architecture combines:
 
-The project combines modern developments in robotics, artificial intelligence, mission planning, and interplanetary communications into a unified framework for future planetary exploration.
+- Artificial Intelligence
+- Goal-Based Mission Control
+- Autonomous Robotics
+- Human-in-the-Loop Decision Making
+- Interplanetary Communications
+
+The project explores how future robotic infrastructure could prepare Mars for sustained scientific exploration and, eventually, human missions.
 
 ---
 
-## Key Principles
+## Core Concept
 
-- Human-in-the-Loop decision making
-- Goal-Based Mission Control
-- Local Artificial Intelligence
+Instead of sending continuous joystick commands, operators send **high-level mission goals**.
+
+**Example:**
+
+> Collect geological samples from Sector B12.
+
+Mission AI then:
+
+- plans the task;
+- allocates robots;
+- navigates safely;
+- coordinates the fleet;
+- reports results back to Earth.
+
+This approach overcomes the unavoidable **4–22 minute communication delay** between Earth and Mars.
+
+---
+
+## Key Features
+
+- Human-in-the-Loop control
+- Goal-Based Mission Architecture
 - Mission AI coordination layer
-- Modular robotic fleet
-- Scalable system architecture
-- Safety-first autonomous execution
+- Local autonomous decision-making
+- Shared World Model
+- Goal Package Protocol
+- Multi-robot fleet coordination
+- Modular robotic architecture
+- Safety-first execution
+- Scalable planetary infrastructure
 
 ---
 
 ## System Architecture
 
-The Mars Avatar Project consists of seven interconnected layers:
-
-1. Human Operator
-2. Human–Machine Interface (PC / VR / AR / Future BCI)
-3. Mission Control & Mission AI
-4. Interplanetary Communication Network
-5. Local AI on Mars
-6. Specialized Robotic Avatar Fleet
-7. Scientific Operations and Feedback
-
-Mission AI coordinates the robotic fleet, distributes tasks, monitors execution, and reports results back to Earth while the human retains strategic control.
+```
+Human Operator
+        │
+Human–Machine Interface
+        │
+Mission Control
+        │
+Mission AI
+        │
+Deep Space Communication
+        │
+Local AI on Mars
+        │
+Autonomous Robotic Fleet
+        │
+Scientific Operations
+```
 
 ---
 
@@ -50,14 +85,14 @@ Mission AI coordinates the robotic fleet, distributes tasks, monitors execution,
 
 The architecture supports multiple specialized robotic systems:
 
-- Scientific Rover
-- Construction Robot
-- Cargo Robot
-- Maintenance Robot
-- Laboratory Unit
-- Reconnaissance Drone
+- 🔬 Scientific Rover
+- 🏗 Construction Robot
+- 📦 Cargo Robot
+- 🔧 Maintenance Robot
+- 🧪 Laboratory Unit
+- 🚁 Reconnaissance Drone
 
-Each platform performs dedicated tasks while cooperating as part of a coordinated autonomous fleet.
+Each platform performs dedicated tasks while operating as part of a coordinated autonomous fleet.
 
 ---
 
@@ -65,74 +100,78 @@ Each platform performs dedicated tasks while cooperating as part of a coordinate
 
 ### Stage I (2026–2030)
 
-Earth-based demonstrations using artificial communication delay.
+Earth-based validation using simulated Mars communication delays.
 
 ### Stage II (2030–2035)
 
-Lunar validation of the complete architecture.
+Lunar demonstrations and system integration.
 
 ### Stage III (2035–2045)
 
-Deployment of autonomous robotic systems on Mars.
+Deployment of autonomous robotic infrastructure on Mars.
 
 ### Stage IV
 
-Large-scale robotic infrastructure supporting future human exploration and settlement.
+Large-scale robotic ecosystems supporting future human exploration and settlement.
 
 ---
 
-## What's New in Version 3.1
+## What's New in Version 3.2
 
 - Expanded comparison with NASA, ESA and commercial robotics programs
-- New Mission AI architecture
-- Fleet coordination model
+- New Mission AI reference architecture
 - Goal Package Protocol
 - Decision approval hierarchy
+- Shared World Model
+- Fleet coordination algorithms
+- Mission AI quality metrics
+- Degradation and fault-tolerance strategy
 - Improved communication architecture
-- Quantitative estimates
-- Risk analysis
-- Ethical considerations
+- Quantitative analysis
+- Risk and ethical assessment
 - Updated scientific references
-- Improved engineering structure
+- Expanded engineering discussion
 
 ---
 
 ## Why This Project Matters
 
-Future Mars exploration will increasingly rely on autonomous robotic systems operating before human arrival.
+Mars exploration will increasingly depend on autonomous robotic systems operating long before humans arrive.
 
-The Mars Avatar Project proposes a system architecture intended to support that vision through:
+The Mars Avatar Project investigates how intelligent robotic fleets can:
 
-- safer exploration
-- reduced operational risk
-- scalable robotic infrastructure
-- intelligent mission coordination
-- efficient use of human expertise despite interplanetary communication delays
+- reduce mission risk;
+- improve scientific productivity;
+- compensate for communication delays;
+- build reusable planetary infrastructure;
+- extend human presence through autonomous systems.
 
-Rather than replacing astronauts, robotic avatars extend human presence where direct human operation is currently impractical.
+Rather than replacing astronauts, robotic avatars extend human capabilities where direct human presence is currently impractical.
 
 ---
 
-## Repository Files
+## Repository Contents
 
-- 📄 Mars_Avatar_White_Paper_v3.1.pdf
-- 📝 Mars_Avatar_White_Paper_v3.1.docx
+- 📄 Mars_Avatar_White_Paper_v3.2.pdf
+- 📝 Mars_Avatar_White_Paper_v3.2.docx
+- 📊 Presentation
+- 🖼 Figures and diagrams
 
-Previous versions remain available through GitHub Releases.
+Previous versions remain available through **GitHub Releases**.
 
 ---
 
 ## Citation
 
-If you reference this work, please cite:
+If you use or reference this work, please cite:
 
 **Oleksandr Khalanhot**
 
 *Mars Avatar Project: Control Without Presence.*
 
-Concept White Paper v3.1 (2026).
+**Concept White Paper v3.2 (2026).**
 
-DOI: https://doi.org/10.5281/zenodo.21194413
+**DOI:** https://doi.org/10.5281/zenodo.21215230
 
 ---
 
@@ -140,7 +179,7 @@ DOI: https://doi.org/10.5281/zenodo.21194413
 
 © Oleksandr Khalanhot, 2026.
 
-This repository contains a conceptual engineering study intended for scientific discussion, feedback, and potential collaboration.
+This repository contains a conceptual engineering study intended for scientific discussion, feedback, and collaboration.
 
 The original text, figures, and diagrams remain the intellectual property of the author unless otherwise specified.
 
@@ -148,6 +187,6 @@ The original text, figures, and diagrams remain the intellectual property of the
 
 ## Contact
 
-Questions, comments, constructive criticism, and collaboration proposals are welcome.
+Constructive feedback, collaboration proposals, and technical discussions are welcome.
 
-Thank you for your interest in the Mars Avatar Project.
+If you are interested in autonomous robotics, AI for space exploration, or future Mars missions, feel free to get in touch.
