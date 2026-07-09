@@ -1,39 +1,37 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21234507.svg)](https://doi.org/10.5281/zenodo.21234507)
-![Version](https://img.shields.io/badge/version-v3.3-blue)
-![Status](https://img.shields.io/badge/status-Concept%20White%20Paper-success)
 
 # Mars Avatar Project
 
-> **Control Without Presence**
->
-> A conceptual architecture for interplanetary telepresence and autonomous robotic exploration.
+## Control Without Presence
 
-The **Mars Avatar Project (MAP)** is a conceptual research project proposing a new approach to planetary exploration. Instead of sending humans to perform physical work on Mars, the project introduces an architecture in which **humans remain on Earth** while a fleet of intelligent robotic avatars provides physical presence on the Martian surface.
+*A conceptual architecture for interplanetary telepresence and autonomous robotic exploration.*
+
+The **Mars Avatar Project (MAP)** is a conceptual research project proposing a new approach to planetary exploration. Instead of sending humans to perform physical work on Mars, the project introduces an architecture in which humans remain on Earth while a fleet of intelligent robotic avatars provides physical presence on the Martian surface.
 
 Because communication between Earth and Mars has an unavoidable **4–22 minute one-way delay**, operators define mission goals while autonomous systems determine how to accomplish them locally.
 
-Rather than treating Mars as the final destination, the project views it as the most demanding proving ground for a universal telepresence technology that could later be applied to the Moon, asteroids, Europa, Titan, and other deep-space destinations.
+Rather than treating Mars as the final destination, the project views it as the most demanding proving ground for a universal telepresence technology that could later be applied to the **Moon, asteroids, Europa, Titan, and other deep-space destinations**.
 
 ---
 
 # Key Concept
 
-```
+```text
 Human Operator
         │
         ▼
    Mission AI
         │
         ▼
- Autonomous Robotic Fleet
+Autonomous Robotic Fleet
         │
         ▼
- Scientific Results
+Scientific Results
 ```
 
-The human defines **what** should be done.
-
-Mission AI determines **how** to achieve the objective.
+- The human defines **what** should be done.
+- Mission AI determines **how** to achieve the objective.
+- Autonomous robotic avatars execute the mission.
+- Scientific data is returned to Earth.
 
 ---
 
@@ -68,19 +66,19 @@ Mission AI determines **how** to achieve the objective.
 
 **Version 3.3**
 
-The most complete public edition of the Mars Avatar Project.
+The most complete public edition of the **Mars Avatar Project**.
 
 ---
 
 # What's New in Version 3.3
 
-Compared with **Version 3.2**, this release significantly improves both the scientific structure and engineering presentation of the project.
+Compared with Version 3.2, this release significantly improves both the scientific structure and engineering presentation of the project.
 
-### Executive Summary
+## Executive Summary
 
-A completely new Executive Summary introduces the project's motivation, originality, engineering value, economics, and long-term roadmap before the technical chapters.
+A completely new Executive Summary introduces the project's motivation, originality, engineering value, economic rationale, and long-term development roadmap before the technical chapters.
 
-### Positioning Relative to Existing Work
+## Positioning Relative to Existing Work
 
 A new chapter compares the Mars Avatar Project with existing developments, including:
 
@@ -89,15 +87,15 @@ A new chapter compares the Mars Avatar Project with existing developments, inclu
 - ESA METERON
 - NASA HERRO
 - ANA Avatar XPRIZE
-- Commercial Space Robotics (GITAI)
+- GITAI Commercial Space Robotics
 
-This clearly distinguishes existing technologies from the project's original contribution.
+This comparison clearly distinguishes existing technologies from the project's original contribution.
 
-### Mission AI Reference Architecture
+## Mission AI Reference Architecture
 
 Mission AI has been expanded into the project's primary original contribution.
 
-New additions include:
+New components include:
 
 - Five-layer Mission AI architecture
 - Goal Interpreter
@@ -105,10 +103,9 @@ New additions include:
 - Shared World Model
 - Execution Monitor
 - Safety & Approval Gate
+- Goal Package Protocol
 
-### Goal Package Protocol
-
-Mission goals are now represented as structured command packages containing:
+Mission goals are represented as structured command packages containing:
 
 - Objective
 - Constraints
@@ -116,7 +113,7 @@ Mission goals are now represented as structured command packages containing:
 - Autonomy Level
 - Fallback Strategy
 
-### Decision Classes
+## Decision Classes
 
 Three levels of autonomy have been introduced:
 
@@ -124,9 +121,9 @@ Three levels of autonomy have been introduced:
 - **Class B** — Mission AI approval
 - **Class C** — Local Robot AI
 
-This provides a scalable path toward increasing autonomous operation.
+This provides a scalable pathway toward increasing autonomous operation.
 
-### Engineering Quality Metrics
+## Engineering Quality Metrics
 
 Mission AI now includes measurable engineering metrics:
 
@@ -136,13 +133,13 @@ Mission AI now includes measurable engineering metrics:
 - Coordination Overhead
 - Explanation Adequacy
 
-### Technology Positioning
+## Technology Positioning
 
-The project is now explicitly positioned as a **technology architecture**, not as a Mars mission proposal.
+The project is explicitly positioned as a **technology architecture**, not as a proposal for a crewed Mars mission.
 
 Mars is presented as the first proving ground for a universal telepresence technology.
 
-### Editorial Improvements
+## Editorial Improvements
 
 - Complete English language revision
 - Unified terminology
@@ -160,17 +157,15 @@ If you use or reference this work, please cite:
 
 **Oleksandr Khalanhot**
 
-*Mars Avatar Project – Control Without Presence*
+**Mars Avatar Project – Control Without Presence**
 
 Concept White Paper
 
-**Version 3.3 (2026)**
+Version 3.3 (2026)
 
-DOI: https://doi.org/10.5281/zenodo.21234507
+**DOI:** https://doi.org/10.5281/zenodo.21268416
 
-Zenodo Record:
-
-https://zenodo.org/records/21234507
+**Zenodo Record:** https://zenodo.org/records/21268416
 
 ---
 
@@ -193,16 +188,32 @@ The next stage of development includes Earth-based simulations, validation of th
 
 ---
 
-# License
+# Open Concept
 
-This repository is intended for research, educational purposes, and scientific discussion.
+This concept was created by an independent author and is released as an **open conceptual contribution** to the global scientific and engineering community.
+
+Any research group, university, startup, space agency, or commercial organization is free to study, use, adapt, implement, and further develop the Mission AI architecture and other concepts presented in this project for **peaceful scientific research and the advancement of space exploration**.
+
+The author encourages collaboration, independent implementation, academic discussion, engineering validation, and experimental demonstration of the proposed ideas.
+
+No royalties, licensing fees, or prior permission are required. Attribution through citation of the original White Paper is appreciated.
 
 ---
 
-## Author
+# License
+
+This repository is intended for research, education, scientific discussion, and technological inspiration.
+
+The concepts presented in this project are openly shared to encourage collaboration and accelerate the development of future planetary exploration technologies.
+
+---
+
+# Author
 
 **Oleksandr Khalanhot**
 
+Independent Researcher
+
 ---
 
-⭐ If you find this project interesting, consider starring the repository or contributing to the discussion.
+⭐ **If you find this project interesting, consider starring the repository, sharing it with colleagues, or contributing to the scientific discussion. Every contribution helps advance the future of planetary exploration.**
