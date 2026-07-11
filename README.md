@@ -51,8 +51,8 @@ Scientific Results
 
 # Repository Contents
 
-- 📄 Mars Avatar Project White Paper v3.3 (PDF)
-- 📝 Mars Avatar Project White Paper v3.3 (DOCX)
+- 📄 Mars Avatar Project White Paper v3.4 (PDF)
+- 📝 Mars Avatar Project White Paper v3.4(DOCX)
 - 📊 Mars Avatar Project Presentation
 - 🛰 Architecture Diagrams
 - 📷 Figures
@@ -64,15 +64,15 @@ Scientific Results
 
 # Current Version
 
-**Version 3.3**
+**Version 3.4**
 
 The most complete public edition of the **Mars Avatar Project**.
 
 ---
 
-# What's New in Version 3.3
+# What's New in Version 3.4
 
-Compared with Version 3.2, this release significantly improves both the scientific structure and engineering presentation of the project.
+Compared with Version 3.3, this release significantly improves both the scientific structure and engineering presentation of the project.
 
 ## Executive Summary
 
