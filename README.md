@@ -5,6 +5,7 @@
 *A conceptual architecture for interplanetary telepresence and autonomous robotic exploration.*
 
 🌐 **Official Website:** [mars-avatar.com](https://mars-avatar.com)
+
 📄 **White Paper v3.4:** [PDF](Mars%20Avatar%20White%20Paper%20v3.4.pdf) · [DOI](https://doi.org/10.5281/zenodo.21268416)
 
 The **Mars Avatar Project (MAP)** is a conceptual research project proposing a new approach to planetary exploration. Instead of sending humans to perform physical work on Mars, the project introduces an architecture in which humans remain on Earth while a fleet of intelligent robotic avatars provides physical presence on the Martian surface.
