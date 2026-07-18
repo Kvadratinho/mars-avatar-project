@@ -5,6 +5,7 @@
 *A conceptual architecture for interplanetary telepresence and autonomous robotic exploration.*
 
 🌐 **Official Website:** [mars-avatar.com](https://mars-avatar.com)
+📄 **White Paper v3.4:** [PDF](Mars%20Avatar%20White%20Paper%20v3.4.pdf) · [DOI](https://doi.org/10.5281/zenodo.21268416)
 
 The **Mars Avatar Project (MAP)** is a conceptual research project proposing a new approach to planetary exploration. Instead of sending humans to perform physical work on Mars, the project introduces an architecture in which humans remain on Earth while a fleet of intelligent robotic avatars provides physical presence on the Martian surface.
 
@@ -38,26 +39,20 @@ Scientific Results
 
 # Main Contributions
 
-- Goal-Based Mission Control
-- Mission AI Reference Architecture
-- Five-Layer Mission AI Model
-- Goal Package Protocol
-- Human-in-the-Loop Control
-- Multi-Robot Fleet Coordination
-- Decision Classes (A / B / C)
-- Earth → Moon → Mars Development Roadmap
-- Technology-First Approach to Planetary Exploration
+- **Mission AI Reference Architecture** — a five-layer model with Goal Interpreter, Fleet Planner, Shared World Model, Execution Monitor, and Safety & Approval Gate
+- **Goal Package Protocol** — mission goals as structured packages: Objective, Constraints, Success Criteria, Autonomy Level, Fallback Strategy
+- **Decision Classes (A / B / C)** — a scalable autonomy model, from human approval to fully local robot decisions
+- **Goal-Based Mission Control** with Human-in-the-Loop oversight
+- **Multi-Robot Fleet Coordination** with measurable engineering metrics
+- **Earth → Moon → Mars** development roadmap
+- **Positioning chapter** comparing MAP with NASA AutoNav, AEGIS, ESA METERON, NASA HERRO, ANA Avatar XPRIZE, and GITAI
 
 ---
 
 # Repository Contents
 
-- 📄 Mars Avatar Project White Paper v3.4 (PDF)
-- 📝 Mars Avatar Project White Paper v3.4 (DOCX)
+- 📄 Mars Avatar Project White Paper v3.4 (PDF / DOCX) — includes architecture diagrams, figures, and references
 - 📊 Mars Avatar Project Presentation
-- 🛰 Architecture Diagrams
-- 📷 Figures
-- 📚 References
 - 📜 README.md
 - ⚖️ LICENSE
 
@@ -65,98 +60,11 @@ Scientific Results
 
 # Current Version
 
-**Version 3.4**
+**Version 3.4** — the most complete public edition.
 
-The most complete public edition of the **Mars Avatar Project**.
+Key improvements over v3.3: new Executive Summary, a chapter positioning MAP relative to existing work, an expanded Mission AI Reference Architecture with the Goal Package Protocol and Decision Classes, engineering quality metrics, and a complete editorial revision.
 
----
-
-# What's New in Version 3.4
-
-Compared with Version 3.3, this release significantly improves both the scientific structure and engineering presentation of the project.
-
-## Executive Summary
-
-A completely new Executive Summary introduces the project's motivation, originality, engineering value, economic rationale, and long-term development roadmap before the technical chapters.
-
-## Positioning Relative to Existing Work
-
-A new chapter compares the Mars Avatar Project with existing developments, including:
-
-- NASA AutoNav
-- NASA AEGIS
-- ESA METERON
-- NASA HERRO
-- ANA Avatar XPRIZE
-- GITAI Commercial Space Robotics
-
-This comparison clearly distinguishes existing technologies from the project's original contribution.
-
-## Mission AI Reference Architecture
-
-Mission AI has been expanded into the project's primary original contribution.
-
-New components include:
-
-- Five-layer Mission AI architecture
-- Goal Interpreter
-- Fleet Planner
-- Shared World Model
-- Execution Monitor
-- Safety & Approval Gate
-- Goal Package Protocol
-
-Mission goals are represented as structured command packages containing:
-
-- Objective
-- Constraints
-- Success Criteria
-- Autonomy Level
-- Fallback Strategy
-
-## Decision Classes
-
-Three levels of autonomy have been introduced:
-
-- **Class A** — Human approval required
-- **Class B** — Mission AI approval
-- **Class C** — Local Robot AI
-
-This provides a scalable pathway toward increasing autonomous operation.
-
-## Engineering Quality Metrics
-
-Mission AI now includes measurable engineering metrics:
-
-- Goal Completion Rate
-- Intervention Rate
-- Safe Stop Rate
-- Coordination Overhead
-- Explanation Adequacy
-
-## Technology Positioning
-
-The project is explicitly positioned as a **technology architecture**, not as a proposal for a crewed Mars mission.
-
-Mars is presented as the first proving ground for a universal telepresence technology.
-
-## Editorial Improvements
-
-- Complete English language revision
-- Unified terminology
-- Improved technical writing
-- Redesigned figures
-- Better document structure
-- Corrected numbering
-- Improved readability
-
----
-
-# Project Website
-
-For the latest updates, documentation, and contact information, visit the official project website:
-
-🌐 **[mars-avatar.com](https://mars-avatar.com)**
+Full changelog: see [Releases](../../releases).
 
 ---
 
@@ -165,35 +73,19 @@ For the latest updates, documentation, and contact information, visit the offici
 If you use or reference this work, please cite:
 
 **Oleksandr Khalanhot**
-
 **Mars Avatar Project – Control Without Presence**
-
-Concept White Paper
-
-Version 3.4 (2026)
+Concept White Paper, Version 3.4 (2026)
 
 **DOI:** <https://doi.org/10.5281/zenodo.21268416>
-
 **Zenodo Record:** <https://zenodo.org/records/21268416>
 
 ---
 
 # Project Status
 
-**Concept White Paper**
+**Concept White Paper.** The Mars Avatar Project is at the conceptual research stage and aims to stimulate discussion and future research in space robotics, artificial intelligence, human–machine interaction, planetary exploration, interplanetary telepresence, and autonomous multi-robot systems.
 
-The Mars Avatar Project is currently at the conceptual research stage and aims to stimulate discussion and future research in:
-
-- Space Robotics
-- Artificial Intelligence
-- Human–Machine Interaction
-- Planetary Exploration
-- Interplanetary Telepresence
-- Autonomous Multi-Robot Systems
-
-The next stage of development includes Earth-based simulations, validation of the Mission AI architecture, and progressive demonstration through the roadmap:
-
-**Earth → Moon → Mars**
+The next stage includes Earth-based simulations, validation of the Mission AI architecture, and progressive demonstration through the roadmap: **Earth → Moon → Mars**.
 
 ---
 
@@ -203,28 +95,25 @@ This concept was created by an independent author and is released as an **open c
 
 Any research group, university, startup, space agency, or commercial organization is free to study, use, adapt, implement, and further develop the Mission AI architecture and other concepts presented in this project for **peaceful scientific research and the advancement of space exploration**.
 
-The author encourages collaboration, independent implementation, academic discussion, engineering validation, and experimental demonstration of the proposed ideas.
-
 No royalties, licensing fees, or prior permission are required. Attribution through citation of the original White Paper is appreciated.
 
 ---
 
 # License
 
-This repository is intended for research, education, scientific discussion, and technological inspiration.
+This work is licensed under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**.
 
-The concepts presented in this project are openly shared to encourage collaboration and accelerate the development of future planetary exploration technologies.
+You are free to share, adapt, and build upon this material for any purpose, provided appropriate credit is given. See the [LICENSE](LICENSE) file for details.
 
 ---
 
 # Author
 
 **Oleksandr Khalanhot**
-
 Independent Researcher
 
 🌐 [mars-avatar.com](https://mars-avatar.com)
 
 ---
 
-⭐ **If you find this project interesting, consider starring the repository, sharing it with colleagues, or contributing to the scientific discussion. Every contribution helps advance the future of planetary exploration.**
+⭐ **If you find this project interesting, consider starring the repository, sharing it with colleagues, or contributing to the scientific discussion.**
