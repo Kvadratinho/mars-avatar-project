@@ -1,9 +1,10 @@
-
 # Mars Avatar Project
 
 ## Control Without Presence
 
 *A conceptual architecture for interplanetary telepresence and autonomous robotic exploration.*
+
+🌐 **Official Website:** [mars-avatar.com](https://mars-avatar.com)
 
 The **Mars Avatar Project (MAP)** is a conceptual research project proposing a new approach to planetary exploration. Instead of sending humans to perform physical work on Mars, the project introduces an architecture in which humans remain on Earth while a fleet of intelligent robotic avatars provides physical presence on the Martian surface.
 
@@ -15,7 +16,7 @@ Rather than treating Mars as the final destination, the project views it as the 
 
 # Key Concept
 
-```text
+```
 Human Operator
         │
         ▼
@@ -52,13 +53,13 @@ Scientific Results
 # Repository Contents
 
 - 📄 Mars Avatar Project White Paper v3.4 (PDF)
-- 📝 Mars Avatar Project White Paper v3.4(DOCX)
+- 📝 Mars Avatar Project White Paper v3.4 (DOCX)
 - 📊 Mars Avatar Project Presentation
-
-- ⚖️  LICENSE
-
+- 🛰 Architecture Diagrams
+- 📷 Figures
+- 📚 References
 - 📜 README.md
- 
+- ⚖️ LICENSE
 
 ---
 
@@ -72,18 +73,7 @@ The most complete public edition of the **Mars Avatar Project**.
 
 # What's New in Version 3.4
 
-Compared with Version 3.3, this is a visual revision. All technical
-content, numbers, and references are unchanged.
-
-- All 10 figures redrawn in a new visual style: icons, subtitle
-  labels inside blocks, and Earth / Space / Mars segment grouping
-  on the architecture diagrams
-- Cover page and headers updated
-
-For the major content additions (Executive Summary, Positioning
-chapter, Mission AI reference architecture, decision classes,
-quality metrics), see the [v3.3 release](https://github.com/Kvadratinho/mars-avatar-project/releases/tag/v3.3).
-
+Compared with Version 3.3, this release significantly improves both the scientific structure and engineering presentation of the project.
 
 ## Executive Summary
 
@@ -162,6 +152,14 @@ Mars is presented as the first proving ground for a universal telepresence techn
 
 ---
 
+# Project Website
+
+For the latest updates, documentation, and contact information, visit the official project website:
+
+🌐 **[mars-avatar.com](https://mars-avatar.com)**
+
+---
+
 # Citation
 
 If you use or reference this work, please cite:
@@ -174,9 +172,9 @@ Concept White Paper
 
 Version 3.4 (2026)
 
-**DOI:** https://doi.org/10.5281/zenodo.21273859
+**DOI:** <https://doi.org/10.5281/zenodo.21268416>
 
-**Zenodo Record:** https://zenodo.org/records/21273859
+**Zenodo Record:** <https://zenodo.org/records/21268416>
 
 ---
 
@@ -213,19 +211,9 @@ No royalties, licensing fees, or prior permission are required. Attribution thro
 
 # License
 
+This repository is intended for research, education, scientific discussion, and technological inspiration.
 
-This work is licensed under a [Creative Commons Attribution 4.0
-International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
-
-You are free to share, adapt, and build upon this work for any
-purpose, provided appropriate credit is given to the original author.
-
-This repository is intended for research, education, scientific
-discussion, and technological inspiration. The concepts presented
-in this project are openly shared to encourage collaboration and
-accelerate the development of future planetary exploration
-technologies.
-
+The concepts presented in this project are openly shared to encourage collaboration and accelerate the development of future planetary exploration technologies.
 
 ---
 
@@ -234,6 +222,8 @@ technologies.
 **Oleksandr Khalanhot**
 
 Independent Researcher
+
+🌐 [mars-avatar.com](https://mars-avatar.com)
 
 ---
 
