@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ===== SEO ===== -->
+<title>Mars Avatar Project — Control Without Presence</title>
+<meta name="description" content="Mars Avatar Project: a research concept for autonomous robotic avatars performing scientific and engineering tasks on Mars under human supervision from Earth.">
+<meta name="keywords" content="Mars, robotics, autonomous systems, space exploration, robotic avatars, teleoperation, Mars mission, planetary robotics, space research, Mission AI">
+<meta name="author" content="Oleksandr Khalanhot">
+<link rel="canonical" href="https://mars-avatar.com/">
+
+<!-- Open Graph: превью при отправке ссылки в соцсети и мессенджеры -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mars Avatar Project">
+<meta property="og:title" content="Mars Avatar Project — Control Without Presence">
+<meta property="og:description" content="A research concept for autonomous robotic avatars performing scientific and engineering work on Mars under human supervision from Earth.">
+<meta property="og:url" content="https://mars-avatar.com/">
+<meta property="og:image" content="https://mars-avatar.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter/X карточка -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Mars_avatar">
+<meta name="twitter:title" content="Mars Avatar Project — Control Without Presence">
+<meta name="twitter:description" content="A research concept for autonomous robotic avatars performing scientific and engineering work on Mars under human supervision from Earth.">
+<meta name="twitter:image" content="https://mars-avatar.com/og-image.jpg">
+
+<!-- Иконка сайта -->
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- ===== Schema.org JSON-LD ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "Mars Avatar Project",
+      "alternateName": "Control Without Presence",
+      "url": "https://mars-avatar.com/",
+      "description": "A research concept for autonomous robotic avatars performing scientific and engineering work on Mars under human supervision from Earth.",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Person",
+      "name": "Oleksandr Khalanhot",
+      "url": "https://mars-avatar.com/",
+      "sameAs": [
+        "https://github.com/Kvadratinho",
+        "https://doi.org/10.5281/zenodo.21538876"
+      ]
+    },
+    {
+      "@type": "ResearchProject",
+      "name": "Mars Avatar Project",
+      "alternateName": "Control Without Presence",
+      "url": "https://mars-avatar.com/",
+      "founder": { "@type": "Person", "name": "Oleksandr Khalanhot" },
+      "description": "An open research concept for supervising fleets of autonomous robotic avatars on Mars across full interplanetary signal delay."
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "headline": "Mars Avatar Project White Paper",
+      "author": { "@type": "Person", "name": "Oleksandr Khalanhot" },
+      "url": "https://doi.org/10.5281/zenodo.21538876",
+      "about": "Autonomous robotic avatars for Mars exploration under human supervision from Earth",
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ]
+}
+</script>
+
+<!-- Google Fonts: Space Grotesk (заголовки) + Inter (текст) + JetBrains Mono (данные) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Hero background: Mars panorama with dark overlay for text readability */
+  header#home{
+    background:
+      linear-gradient(to bottom,
+        rgba(10,7,6,0.55) 0%,
+        rgba(10,7,6,0.45) 45%,
+        rgba(10,7,6,0.85) 100%),
+      url('hero-bg.jpg') 65% bottom / cover no-repeat;
+  }
+  @media (max-width: 700px){
+    header#home{
+      background:
+        linear-gradient(to bottom,
+          rgba(10,7,6,0.60) 0%,
+          rgba(10,7,6,0.55) 45%,
+          rgba(10,7,6,0.88) 100%),
+        url('hero-bg.jpg') 60% bottom / cover no-repeat;
+    }
+  }
+  /* Floating back-to-top button */
+  #to-top{
+    position:fixed; right:1.1rem; bottom:1.1rem; z-index:90;
+    width:46px; height:46px; border-radius:50%;
+    background:rgba(26,18,16,0.92); border:1px solid #33221d;
+    color:#e8ddd6; font-size:1.25rem; text-decoration:none;
+    display:flex; align-items:center; justify-content:center;
+    opacity:0; pointer-events:none; transition:opacity .3s;
+  }
+  #to-top.show{ opacity:1; pointer-events:auto; }
+  /* Contact form */
+  .contact-form{
+    max-width:480px; margin:2rem auto 0; display:grid; gap:0.8rem; text-align:left;
+  }
+  .contact-form input, .contact-form textarea{
+    width:100%; box-sizing:border-box; padding:0.85rem 1rem;
+    background:#1a1210; border:1px solid #33221d; border-radius:8px;
+    color:#e8ddd6; font-family:inherit; font-size:1rem;
+  }
+  .contact-form input:focus, .contact-form textarea:focus{
+    outline:none; border-color:#c65a33;
+  }
+  .contact-form button{ cursor:pointer; font-family:inherit; }
+</style>
+</head>
+
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<nav id="site-nav">
+  <a href="#home" class="nav-logo">MARS AVATAR PROJECT</a>
+  <button id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div id="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#architecture">Architecture</a>
+    <a href="#mission-ai">Mission AI</a>
+    <a href="#fleet">Fleet</a>
+    <a href="#roadmap">Path Forward</a>
+    <a href="#related">Related Work</a>
+    <a href="#whitepaper">White Paper</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- ============ HOME / HERO ============ -->
+<header id="home">
+  <div class="signal-badge">
+    <span class="dot"></span>
+    EARTH ⇄ MARS SIGNAL DELAY&nbsp;·&nbsp;4–24&nbsp;MIN ONE-WAY
+  </div>
+  <h1>Mars Avatar Project</h1>
+  <p class="tagline">Control Without Presence</p>
+  <p class="hero-sub">
+    A research concept for autonomous robotic avatars that carry out
+    scientific and engineering work on the Martian surface — supervised,
+    not remote-controlled, by human operators on Earth.
+  </p>
+  <div class="buttons">
+<a class="button button-primary" href="#whitepaper">Read the White Paper</a>
+<a class="button" href="https://github.com/Kvadratinho/mars-avatar-project" target="_blank" rel="noopener">GitHub</a>
+<a class="button" href="https://doi.org/10.5281/zenodo.21538876" target="_blank" rel="noopener">Zenodo DOI</a>
+</div>
+
+  <a href="#about" class="scroll-cue" aria-label="Scroll to About">↓</a>
+</header>
+
+<main>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section">
+  <p class="eyebrow">Overview</p>
+  <h2>About the Project</h2>
+
+  <h3 style="margin:2.2rem 0 0.8rem; font-size:1.25rem;">The Problem</h3>
+  <div class="section-grid">
+    <p>
+      You cannot drive a robot on Mars from Earth. A radio signal takes 4 to
+      24 minutes to get there — and just as long to come back. By the time a
+      rock appears on your screen, the rover met it many minutes ago.
+      Astronauts have remotely driven rovers before, but only when the signal
+      took less than a second. No reaction time, however fast, survives the
+      Mars gap.
+    </p>
+    <p>
+      Today's Mars rovers can already drive themselves — Perseverance covers
+      most of its route with no human watching. But each rover is a lone,
+      do-everything machine following a route planned days ahead, and every
+      new decision waits for tomorrow's instructions from Earth. Scientists
+      have known the answer for decades: people should set the goals, machines
+      should do the driving. Nobody has yet put the whole system together.
+    </p>
+  </div>
+
+  <h3 style="margin:2.2rem 0 0.8rem; font-size:1.25rem;">The Solution</h3>
+  <div class="section-grid">
+    <p>
+      The Mars Avatar Project is a blueprint for that system. The real problem
+      is not moving a robot — it is keeping people meaningfully in charge of
+      work they cannot watch live and cannot steer by hand.
+    </p>
+    <p>
+      Earth sends the <em>what</em>: go there, collect that, stay away from
+      this. A small team of robots on Mars works out the <em>how</em>: they
+      plan their own routes, avoid dangers on their own in seconds, help each
+      other, and report back when the job is done. People keep making every
+      important decision — they just stop turning the steering wheel.
+    </p>
+  </div>
+
+  <h3 style="margin:2.2rem 0 0.8rem; font-size:1.25rem;">Why It Matters</h3>
+  <div class="section-grid">
+    <p>
+      Before the first humans land on Mars, someone has to prepare the site:
+      build landing pads, set up power, stockpile supplies. That work starts
+      years before any crew arrives — with no one there to watch over it.
+      After people land, an astronaut's hour will be too precious and too
+      risky to spend on routine chores that a supervised robot could handle.
+      And in between lies the science itself: samples, surveys, and equipment
+      that need attention every day, not only when the daily command window
+      allows.
+    </p>
+    <p>
+      Control without presence is not a convenience — it is the missing layer
+      between today's rovers and tomorrow's settlements. Solve remote work at
+      this distance once, and the same approach opens the far side of the
+      Moon, asteroids, the moons of Jupiter and Saturn — every place people
+      cannot yet stand. <em>The architecture matters more than the
+      destination.</em>
+    </p>
+  </div>
+</section>
+
+<!-- ============ ARCHITECTURE ============ -->
+<section id="architecture" class="section section-alt">
+  <p class="eyebrow">System Design</p>
+  <h2>Architecture</h2>
+  <p class="section-intro">
+    The system is built as three layers working together — each designed
+    around one hard fact: the two planets cannot talk in real time.
+  </p>
+  <div class="card-grid">
+    <div class="card">
+      <span class="card-index">01</span>
+      <h3>Earth Command Layer</h3>
+      <p>The mission team on Earth defines what needs to be done: objectives, constraints, and safety limits. There is no moment-to-moment piloting — the team reviews results and approves the next set of tasks as the communication schedule allows.</p>
+    </div>
+    <div class="card">
+      <span class="card-index">02</span>
+      <h3>Relay &amp; Scheduling Layer</h3>
+      <p>The link between the planets. Commands heading to Mars and telemetry coming back are queued, prioritized, and transmitted whenever a communication window opens between Earth and Mars.</p>
+    </div>
+    <div class="card">
+      <span class="card-index">03</span>
+      <h3>Avatar Autonomy Layer</h3>
+      <p>Onboard the avatars on Mars, local AI turns each task into action — planning the route, operating the tools, responding to hazards — in seconds, without waiting for instructions from Earth.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MISSION AI ============ -->
+<section id="mission-ai" class="section">
+  <p class="eyebrow">Onboard Intelligence</p>
+  <h2>Mission AI</h2>
+  <div class="section-grid">
+    <p>
+      Mission AI is the decision-making system that lives on the avatar itself.
+      It does not wait for permission to react to what it sees — a slope that's
+      too steep, a rock that's too unstable, a sensor reading that's out of
+      range. It handles these locally, in seconds, and reports back on the next
+      communication pass.
+    </p>
+    <p>
+      What it does <em>not</em> do is decide mission priorities on its own.
+      Strategic choices — which site to investigate, which sample to collect —
+      stay with the human team on Earth. The avatar is trusted to execute
+      safely, not to set the mission's goals.
+    </p>
+  </div>
+  <ul class="check-list">
+    <li>Local hazard detection and avoidance</li>
+    <li>Path planning between waypoints set by Earth</li>
+    <li>Manipulation task execution (drilling, sampling, deployment)</li>
+    <li>Continuous self-diagnostics and fault reporting</li>
+  </ul>
+</section>
+
+<!-- ============ ROBOTIC AVATAR FLEET ============ -->
+<section id="fleet" class="section section-alt">
+  <p class="eyebrow">Hardware Concept</p>
+  <h2>Robotic Avatar Fleet</h2>
+  <p class="section-intro">
+    Rather than one general-purpose rover, the concept proposes a small fleet
+    of specialized avatars that coordinate on shared objectives.
+  </p>
+  <div class="card-grid">
+    <div class="card">
+      <img src="unit-survey.jpeg" alt="Concept render of the Survey Unit: a six-wheeled rover with a stereo camera mast and solar panel on Martian terrain" style="width:100%; border-radius:8px; margin-bottom:0.9rem;" loading="lazy">
+      <h3>Survey Unit</h3>
+      <p>Long-range mobility platform for terrain mapping and site reconnaissance ahead of other units.</p>
+    </div>
+    <div class="card">
+      <img src="unit-manipulator.jpeg" alt="Concept render of the Manipulator Unit: a rover with a multi-joint robotic arm gripping a rock sample" style="width:100%; border-radius:8px; margin-bottom:0.9rem;" loading="lazy">
+      <h3>Manipulator Unit</h3>
+      <p>Fixed-base or short-range arm-equipped avatar for sample collection, drilling, and equipment handling.</p>
+    </div>
+    <div class="card">
+      <img src="unit-relay.jpeg" alt="Concept render of the Relay Unit: a stationary antenna mast on tripod legs with a dish and two solar panels" style="width:100%; border-radius:8px; margin-bottom:0.9rem;" loading="lazy">
+      <h3>Relay Unit</h3>
+      <p>Stationary or elevated platform extending local communication range between avatars and orbital relays.</p>
+    </div>
+  </div>
+  <p style="font-size:0.85rem; opacity:0.7; margin-top:1.25rem;">
+    Images are AI-generated concept art, not photographs of real hardware.
+    No flight hardware has been built — see <a href="#roadmap">Path Forward</a>
+    for the project's current stage.
+  </p>
+</section>
+
+<!-- ============ PATH FORWARD ============ -->
+<section id="roadmap" class="section">
+  <p class="eyebrow">Research Directions</p>
+  <h2>Path Forward</h2>
+  <p class="section-intro">
+    The concept is published and open. The steps below map where the idea
+    can go next — some in progress, others open for collaborators to take on.
+  </p>
+  <div class="timeline">
+    <div class="timeline-item">
+      <span class="timeline-marker">Phase 1 <span style="opacity:0.75;">· ✓ complete</span></span>
+      <div class="timeline-content">
+        <h3>Concept &amp; Publication</h3>
+        <p>The architecture is formalized: the white paper is published on Zenodo with a permanent DOI, and the open-source repository is live on GitHub.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-marker">Phase 2</span>
+      <div class="timeline-content">
+        <h3>Simulation</h3>
+        <p>A software simulation of the command → relay → autonomy pipeline under realistic latency conditions would let anyone experience why joystick control fails at interplanetary distance — and how supervised autonomy solves it. An open task for collaborators.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-marker">Phase 3</span>
+      <div class="timeline-content">
+        <h3>Prototype Testbed</h3>
+        <p>A small-scale robotic testbed — an accessible platform such as a Raspberry Pi rover — to validate autonomy behaviors in analog terrain. A natural fit for a university or maker-community project.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-marker">Phase 4</span>
+      <div class="timeline-content">
+        <h3>Partnerships</h3>
+        <p>Universities, research institutes, and aerospace organizations are invited to review the concept, challenge it, and build on it. See <a href="#contact">Contact</a> to get involved.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RELATED WORK ============ -->
+<section id="related" class="section section-alt">
+  <p class="eyebrow">Scientific Context</p>
+  <h2>Related Work</h2>
+  <p class="section-intro">
+    The Mars Avatar Project builds on three decades of research in supervisory
+    control, crew-operated telerobotics, and flight-proven rover autonomy.
+  </p>
+  <ul class="check-list">
+    <li>
+      <strong>Sheridan, T.B. (1992).</strong> <em>Telerobotics, Automation, and Human Supervisory Control.</em> MIT&nbsp;Press.
+      The foundational text on supervisory control — humans working through semi-autonomous machines
+      rather than steering them directly. The theoretical basis for the operator-to-supervisor shift
+      at the core of this project.
+      <a href="https://mitpress.mit.edu/9780262515474/telerobotics-automation-and-human-supervisory-control/" target="_blank" rel="noopener">MIT Press →</a>
+    </li>
+    <li>
+      <strong>NASA Surface Telerobotics (2013).</strong> Astronauts aboard the ISS remotely supervised
+      the K10 rover at NASA Ames across four simulated mission phases — the first fully interactive
+      operation of a planetary rover by a crew member in space, using command sequencing rather than
+      joystick control.
+      <a href="https://arxiv.org/abs/1705.09692" target="_blank" rel="noopener">Paper (arXiv) →</a>
+    </li>
+    <li>
+      <strong>ESA METERON / Analog-1 (2019–2022).</strong> A multi-year ESA campaign in which astronauts
+      operated the Interact rover from orbit and in lunar-analog terrain on Mount Etna, testing
+      force-feedback control under injected signal delay.
+      <a href="https://www.esa.int/Enabling_Support/Space_Engineering_Technology/Rover_plus_astronaut_complete_Mount_Etna_challenge" target="_blank" rel="noopener">ESA →</a>
+    </li>
+    <li>
+      <strong>Verma et al. (2023).</strong> <em>Autonomous robotics is driving Perseverance rover's progress on Mars.</em>
+      Science Robotics. Flight-proven evidence that onboard autonomy works at Mars: AutoNav evaluated
+      88% of the rover's first-Mars-year traverse, including record drives without human review.
+      <a href="https://www.science.org/doi/10.1126/scirobotics.adi3099" target="_blank" rel="noopener">Science Robotics →</a>
+    </li>
+    <li>
+      <strong>Enhanced Autonomous Navigation (ENav).</strong> The driving algorithm behind Perseverance's
+      autonomy: two-stage path selection and hazard-aware collision checking on severely limited
+      onboard compute — a template for the Avatar Autonomy Layer.
+      <a href="https://ieeexplore.ieee.org/document/11265757" target="_blank" rel="noopener">IEEE →</a>
+    </li>
+  </ul>
+  <p class="section-intro" style="margin-top:1.25rem;">
+    Where prior work demonstrates individual pieces — supervisory control theory, crew-in-the-loop
+    experiments at sub-second delay, autonomous traverse — the Mars Avatar Project focuses on their
+    integration under full interplanetary latency, with specialized avatar fleets supervised from Earth.
+  </p>
+</section>
+
+<!-- ============ WHITE PAPER ============ -->
+<section id="whitepaper" class="section">
+  <p class="eyebrow">Documentation</p>
+  <h2>White Paper</h2>
+  <p class="section-intro">
+    The full technical concept — motivation, architecture, and open research
+    questions — is available as a white paper.
+  </p>
+  <div class="buttons">
+<a class="button button-primary" href="https://zenodo.org/records/21538876/files/Mars%20Avatar%20White%20Paper%20v3.5.pdf?download=1">Download White Paper (PDF)</a>
+<a class="button" href="https://doi.org/10.5281/zenodo.21538876" target="_blank" rel="noopener">View on Zenodo</a>
+</div>
+  <p style="font-size:0.85rem; opacity:0.7; margin-top:1.25rem;">
+    © 2026 Oleksandr Khalanhot · White paper licensed under
+    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener">CC&nbsp;BY&nbsp;4.0</a>
+  </p>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" class="section section-alt">
+  <p class="eyebrow">Visuals</p>
+  <h2>Gallery</h2>
+  <p class="section-intro">Concept diagrams of the mission architecture.</p>
+  <div class="gallery-grid">
+    <figure class="gallery-item">
+      <img src="diagram-signal-path.svg" alt="Diagram of the Earth to Mars signal path through an orbital relay, showing 4 to 24 minute one-way delay" loading="lazy">
+      <figcaption>Fig. 1 — Earth–Mars signal path</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="diagram-three-layers.svg" alt="Diagram of the three-layer control model: Earth command, relay and scheduling, avatar autonomy" loading="lazy">
+      <figcaption>Fig. 2 — Three-layer control model</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="diagram-fleet.svg" alt="Diagram of the robotic avatar fleet on the Martian surface: survey unit, relay unit, manipulator unit" loading="lazy">
+      <figcaption>Fig. 3 — Robotic avatar fleet</figcaption>
+    </figure>
+  </div>
+</section>
+
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section">
+  <p class="eyebrow">Get in Touch</p>
+  <h2>Contact</h2>
+  <p class="section-intro">
+    Open to collaboration with researchers, engineers, and institutions
+    interested in autonomous planetary systems.
+  </p>
+  <form class="contact-form" action="https://formspree.io/f/xeeyebdp" method="POST">
+    <input type="text" name="name" placeholder="Your name" required>
+    <input type="email" name="email" placeholder="Your email" required>
+    <textarea name="message" rows="4" placeholder="Your message" required></textarea>
+    <button type="submit" class="button button-primary">Send Message</button>
+  </form>
+  <div class="buttons" style="margin-top:1.5rem;">
+    <a class="button" href="mailto:kvadratinho@gmail.com">Email</a>
+    <a class="button" href="https://github.com/Kvadratinho/mars-avatar-project" target="_blank" rel="noopener">GitHub</a>
+    <a class="button" href="https://x.com/Mars_avatar" target="_blank" rel="noopener">Follow on X</a>
+  </div>
+  <p class="contact-email">
+  <span class="contact-label">EMAIL</span>
+  <a href="mailto:kvadratinho@gmail.com">kvadratinho@gmail.com</a>
+</p>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <p>Mars Avatar Project — Control Without Presence</p>
+  <p class="footer-author">Author: Oleksandr Khalanhot</p>
+  <p class="footer-author">White paper: <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener">CC BY 4.0</a></p>
+  <p class="footer-author" style="max-width:38rem; margin-left:auto; margin-right:auto;">
+    Mars Avatar Project is an independent research concept. It is not affiliated with,
+    endorsed by, or funded by NASA, ESA, or any space agency or organization.
+    References to prior work are provided for scientific context only.
+  </p>
+</footer>
+
+<a href="#home" id="to-top" aria-label="Back to top">&#8593;</a>
+
+<script src="script.js"></script>
+<script>
+  (function(){
+    var btn = document.getElementById('to-top');
+    window.addEventListener('scroll', function(){
+      btn.classList.toggle('show', window.scrollY > 600);
+    }, {passive:true});
+  })();
+</script>
+</body>
+</html>
