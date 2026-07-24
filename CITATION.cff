@@ -11,7 +11,7 @@ authors:
     country: CH
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.21268416
+    value: 10.5281/zenodo.21538876
     description: Zenodo record
 repository-code: https://github.com/Kvadratinho/mars-avatar-project
 url: https://mars-avatar.com/

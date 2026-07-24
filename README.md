@@ -2,12 +2,9 @@
 
 ### Control Without Presence
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21268416.svg)](https://doi.org/10.5281/zenodo.21268416)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21538876.svg)](https://doi.org/10.5281/zenodo.21538876)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-<!-- After publishing v3.5 on Zenodo, replace the DOI above with the new
-     version DOI, or with the concept DOI ("Cite all versions") so the badge
-     always resolves to the latest edition. -->
 
 A concept white paper on exploring Mars through a coordinated fleet of robotic
 avatars, commanded from Earth at the level of goals rather than movements.
@@ -121,7 +118,7 @@ Critique is more useful here than agreement. Open an issue, or write directly.
 
 > Khalanhot, O. (2026). *Mars Avatar Project — Control Without Presence.*
 > Concept White Paper, version 3.5. Zenodo.
-> https://doi.org/10.5281/zenodo.21268416
+> https://doi.org/10.5281/zenodo.21538876
 
 ## License
 
