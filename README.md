@@ -1,120 +1,136 @@
 # Mars Avatar Project
 
-## Control Without Presence
+### Control Without Presence
 
-*A conceptual architecture for interplanetary telepresence and autonomous robotic exploration.*
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21268416.svg)](https://doi.org/10.5281/zenodo.21268416)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-🌐 **Official Website:** [mars-avatar.com](https://mars-avatar.com)
+<!-- After publishing v3.5 on Zenodo, replace the DOI above with the new
+     version DOI, or with the concept DOI ("Cite all versions") so the badge
+     always resolves to the latest edition. -->
 
-📄 **White Paper v3.4:** [PDF](Mars%20Avatar%20White%20Paper%20v3.4.pdf) · [DOI](https://doi.org/10.5281/zenodo.21268416)
-
-The **Mars Avatar Project (MAP)** is a conceptual research project proposing a new approach to planetary exploration. Instead of sending humans to perform physical work on Mars, the project introduces an architecture in which humans remain on Earth while a fleet of intelligent robotic avatars provides physical presence on the Martian surface.
-
-Because communication between Earth and Mars has an unavoidable **4–22 minute one-way delay**, operators define mission goals while autonomous systems determine how to accomplish them locally.
-
-Rather than treating Mars as the final destination, the project views it as the most demanding proving ground for a universal telepresence technology that could later be applied to the **Moon, asteroids, Europa, Titan, and other deep-space destinations**.
+A concept white paper on exploring Mars through a coordinated fleet of robotic
+avatars, commanded from Earth at the level of goals rather than movements.
 
 ---
 
-# Key Concept
+## The problem
+
+The one-way signal delay between Earth and Mars is 4–22 minutes and cannot be
+engineered away. Continuous teleoperation is therefore impossible, and the
+architecture of any remote presence system has to treat latency as a design
+condition rather than a defect. The operator transmits goals; onboard autonomy
+determines how to achieve them.
+
+## What is claimed
+
+Almost every component of this architecture already exists in isolation:
+goal-based commanding on NASA rovers (AutoNav, AEGIS), supervisory telepresence
+from orbit (ESA METERON, Analog-1), immersive avatar interfaces (ANA Avatar
+XPRIZE). The paper says so explicitly, in Chapter 3, and treats that prior work
+as the baseline.
+
+The narrow claim is this: **what has not been built is the layer that
+coordinates a heterogeneous fleet under full interplanetary latency.** A single
+rover is autonomous today. Five specialized platforms sharing one world model,
+reallocating subtasks after a loss, and staying coherent when the local network
+fragments, are not. That layer — Mission AI — is the subject of Chapter 6:
+a five-layer reference architecture, a goal-package protocol, graduated decision
+classes (A/B/C), a degradation hierarchy, and measurable quality metrics.
+
+## What is not claimed
+
+- **That AI solves unforeseen failure.** Onboard systems handle contingencies
+  enumerated at design time, and present-day AI does not meaningfully extend
+  that set — particularly under the memory and compute budgets of planetary
+  robots. Section 5.13 states this and advances only the weaker claim the
+  architecture can defend: a fleet does not solve unmodelled failure, it lowers
+  the cost of not having solved it. Redundancy does not answer correlated or
+  common-mode failure at all.
+- **That this replaces crewed missions.** The intended relationship is
+  sequential: robots prepare the environment, humans arrive into it.
+- **That the cost model is a budget.** Chapter 11 gives order-of-magnitude
+  figures with stated assumptions, and Section 11.9 lists four conditions under
+  which they fail.
+- **That neural interfaces matter here.** They are explicitly off the critical
+  path (Section 9.3). Input bandwidth is not the binding constraint when a
+  decision takes minutes to reach Mars.
+
+## Concept
 
 ```
-Human Operator
+Human Operator          goals, constraints, Class A approvals
         │
         ▼
-   Mission AI
-        │
+   Mission AI           interpretation, fleet planning, shared world model,
+        │               execution monitoring, safety gate
         ▼
-Autonomous Robotic Fleet
+Robotic Fleet           rover · construction · cargo · drone · lab · maintenance
         │
         ▼
 Scientific Results
 ```
 
-- The human defines **what** should be done.
-- Mission AI determines **how** to achieve the objective.
-- Autonomous robotic avatars execute the mission.
-- Scientific data is returned to Earth.
+## Open problems
 
----
+These are the parts that are genuinely unsolved, and they define the critical
+path more than the hardware does:
 
-# Main Contributions
+- detecting the unmodelled case — telling "handled poorly" from "outside the
+  system's competence" (Section 6.7)
+- common-mode failure in a fleet of similar platforms
+- verification of learned components; sim-to-real transfer for Martian conditions
+- coordination when the local network fragments for extended periods
+- long-term drift of the shared world model
+- energy for construction-class platforms: an MMRTG supplies ~110 W, while
+  manipulator work needs kilowatts (Section 11.6)
 
-- **Mission AI Reference Architecture** — a five-layer model with Goal Interpreter, Fleet Planner, Shared World Model, Execution Monitor, and Safety & Approval Gate
-- **Goal Package Protocol** — mission goals as structured packages: Objective, Constraints, Success Criteria, Autonomy Level, Fallback Strategy
-- **Decision Classes (A / B / C)** — a scalable autonomy model, from human approval to fully local robot decisions
-- **Goal-Based Mission Control** with Human-in-the-Loop oversight
-- **Multi-Robot Fleet Coordination** with measurable engineering metrics
-- **Earth → Moon → Mars** development roadmap
-- **Positioning chapter** comparing MAP with NASA AutoNav, AEGIS, ESA METERON, NASA HERRO, ANA Avatar XPRIZE, and GITAI
+## Contents
 
----
+| File | Description |
+|---|---|
+| `Mars_Avatar_White_Paper_v3.5.pdf` | Concept white paper, current edition |
+| `Mars_Avatar_White_Paper_v3.5.docx` | Same, editable |
+| `Mars_Avatar_Presentation_EN.pptx` | Presentation deck |
+| `CHANGELOG.md` | Version history |
+| `LICENSE` | CC BY 4.0 |
 
-# Repository Contents
+## Roadmap
 
-- 📄 Mars Avatar Project White Paper v3.4 (PDF / DOCX) — includes architecture diagrams, figures, and references
-- 📊 Mars Avatar Project Presentation
-- 📜 README.md
-- ⚖️ LICENSE
+| Stage | Scope |
+|---|---|
+| I | Terrestrial prototype under simulated delay, including failure injection |
+| II | Lunar demonstration — multi-robot coordination at seconds of latency |
+| III | First robotic missions on Mars |
+| IV | Robotic infrastructure |
+| V | Support for crewed expeditions |
 
----
+Transitions occur only against the measurable criteria of Sections 10.9 and 6.6.
 
-# Current Version
+## Status
 
-**Version 3.4** — the most complete public edition.
+Conceptual research. No prototype, no simulation results, no experimental data
+— the document is an architecture proposal, not a report of work performed. The
+intended next step is the smallest useful experiment: a simulated fleet under
+auction-based task allocation, with anomalies injected from outside the
+documented fault model, measured against the metrics of Section 6.6.
 
-Key improvements over v3.3: new Executive Summary, a chapter positioning MAP relative to existing work, an expanded Mission AI Reference Architecture with the Goal Package Protocol and Decision Classes, engineering quality metrics, and a complete editorial revision.
+Critique is more useful here than agreement. Open an issue, or write directly.
 
-Full changelog: see [Releases](../../releases).
+## Citation
 
----
+> Khalanhot, O. (2026). *Mars Avatar Project — Control Without Presence.*
+> Concept White Paper, version 3.5. Zenodo.
+> https://doi.org/10.5281/zenodo.21268416
 
-# Citation
+## License
 
-If you use or reference this work, please cite:
+[Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
+(CC BY 4.0). You may share and adapt this material for any purpose, including
+commercially, provided you give appropriate credit. No permission or fee is
+required.
 
-**Oleksandr Khalanhot**
-**Mars Avatar Project – Control Without Presence**
-Concept White Paper, Version 3.4 (2026)
+## Author
 
-**DOI:** <https://doi.org/10.5281/zenodo.21268416>
-**Zenodo Record:** <https://zenodo.org/records/21268416>
-
----
-
-# Project Status
-
-**Concept White Paper.** The Mars Avatar Project is at the conceptual research stage and aims to stimulate discussion and future research in space robotics, artificial intelligence, human–machine interaction, planetary exploration, interplanetary telepresence, and autonomous multi-robot systems.
-
-The next stage includes Earth-based simulations, validation of the Mission AI architecture, and progressive demonstration through the roadmap: **Earth → Moon → Mars**.
-
----
-
-# Open Concept
-
-This concept was created by an independent author and is released as an **open conceptual contribution** to the global scientific and engineering community.
-
-Any research group, university, startup, space agency, or commercial organization is free to study, use, adapt, implement, and further develop the Mission AI architecture and other concepts presented in this project for **peaceful scientific research and the advancement of space exploration**.
-
-No royalties, licensing fees, or prior permission are required. Attribution through citation of the original White Paper is appreciated.
-
----
-
-# License
-
-This work is licensed under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**.
-
-You are free to share, adapt, and build upon this material for any purpose, provided appropriate credit is given. See the [LICENSE](LICENSE) file for details.
-
----
-
-# Author
-
-**Oleksandr Khalanhot**
-Independent Researcher
-
-🌐 [mars-avatar.com](https://mars-avatar.com)
-
----
-
-⭐ **If you find this project interesting, consider starring the repository, sharing it with colleagues, or contributing to the scientific discussion.**
+**Oleksandr Khalanhot** — independent researcher, Zürich, Switzerland
+[mars-avatar.com](https://mars-avatar.com/)
