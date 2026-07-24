@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+title: Mars Avatar Project — Control Without Presence
+message: >-
+  If you reference this work, please cite it using the metadata below.
+type: generic
+authors:
+  - given-names: Oleksandr
+    family-names: Khalanhot
+    affiliation: Independent researcher
+    city: Zürich
+    country: CH
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.21268416
+    description: Zenodo record
+repository-code: https://github.com/Kvadratinho/mars-avatar-project
+url: https://mars-avatar.com/
+abstract: >-
+  A concept white paper on exploring Mars through a coordinated fleet of
+  robotic avatars commanded from Earth at the level of goals rather than
+  movements. The one-way signal delay of 4–22 minutes is treated as a design
+  condition: the operator transmits goals and onboard autonomy determines how
+  to achieve them. The paper's narrow contribution is the coordination layer
+  above a single vehicle — a five-layer Mission AI reference architecture with
+  a goal-package protocol, graduated decision classes, a degradation
+  hierarchy, and measurable quality metrics — together with an explicit
+  treatment of the limits of that approach, in particular the boundary of the
+  modelled fault space.
+keywords:
+  - space robotics
+  - multi-robot systems
+  - supervisory control
+  - telerobotics
+  - task allocation
+  - autonomy
+  - Mars exploration
+  - mission architecture
+license: CC-BY-4.0
+version: '3.5'
+date-released: '2026-07-22'
